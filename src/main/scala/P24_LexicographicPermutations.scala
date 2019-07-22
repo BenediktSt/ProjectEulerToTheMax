@@ -1,3 +1,4 @@
+import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 
 object P24_LexicographicPermutations extends App {
@@ -11,7 +12,7 @@ object P24_LexicographicPermutations extends App {
 
   }
 
-  def nextPermutation(permutation : Seq[Int], numbers : Seq[Int]): Seq[Int] = {
+  def nextPermutation(permutation : Seq[Int], numbers : Seq[Int]): mutable.Seq[Int] = {
     var res : ListBuffer[Int] = ListBuffer.empty
     res ++= permutation
     for(i <- res.indices) {

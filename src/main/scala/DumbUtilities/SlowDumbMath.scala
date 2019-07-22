@@ -1,10 +1,11 @@
 package DumbUtilities
 
+import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 
 object SlowDumbMath {
 
-  def divisors(number: Double): Seq[Double] = {
+  def divisors(number: Double): mutable.Seq[Double] = {
     val divisors = ListBuffer(1.0)
     for (i <- 2 to Math.sqrt(number).toInt) {
       if (number % i == 0) {
