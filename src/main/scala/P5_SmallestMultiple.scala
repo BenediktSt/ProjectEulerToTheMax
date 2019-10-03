@@ -1,17 +1,13 @@
 object P5_SmallestMultiple extends App {
 
-  val until = 20
+  def divisible(n: Int, in : Int) : Boolean = (1 to n).map(in % _ == 0).reduce((a, b) => a && b)
 
-  val Oneto20 = 1 to 20
-
-  def divisible(in : Int) : Boolean = Oneto20.map(in % _ == 0).reduce((a, b) => a && b)
-
-  def calculate() : Int = {
+  def calculate(n: Int) : Int = {
     var init = 1
-    while (!divisible(init))
+    while (!divisible(n, init))
       init += 1
     init
   }
 
-  println(calculate())
+  println(calculate(7))
 }
