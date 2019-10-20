@@ -31,4 +31,10 @@ object SlowDumbMath {
     }
   }
 
+  private val facultyCalculation: LazyList[(Long, Int)] = (1L, 0) #:: facultyCalculation.map { e => (e._1 * (e._2 + 1), e._2 + 1) }
+
+  val faculties : LazyList[Long] = {
+    facultyCalculation.map(e => e._1)
+  }
+
 }
