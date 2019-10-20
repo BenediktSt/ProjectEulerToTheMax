@@ -24,7 +24,7 @@ object P14_LongestCollatzSequence extends App {
         startingIndexForTheMaximumValue = i
       }
     }
-    (max, startingIndexForTheMaximumValue)
+    startingIndexForTheMaximumValue
   }
   println(calculate(1000000))
 }
