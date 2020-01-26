@@ -18,4 +18,8 @@ class P25_Spec extends FlatSpec {
     assert(P25_1000Fib.calculate(3) === 12)
   }
 
+  it should "calculate the correct result for digit count = 1000" in {
+    assert(P25_1000Fib.calculate(1000) === 4782)
+  }
+
 }
